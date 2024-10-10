@@ -22,6 +22,7 @@ body {
     background-position: center;
     border: none;
 }
+
 .h4, h4 {
     font-size: 1.5rem;
     margin-top: 40px;
@@ -34,88 +35,81 @@ body {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* Optional text shadow */
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.highlighted-info{
+
+.highlighted-info {
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
 }
-.highlighted-info2{
+
+.highlighted-info2 {
     font-size: 20px;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
-
 }
 
-.sector-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 4 columns */
-    gap: 1rem; /* Space between grid items */
-    margin-bottom: 1.5rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center; /* Centering text */
-}
-
-.sector-item {
+.topic {
+    margin-top: 40px;
+    font-size: 24px;
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 20px;
-    text-shadow: 1px 2px 9px rgba(165, 42, 42, 0.7); /* Text shadow effect */
-}
-
-.text-center {
     text-align: center;
 }
 
-h1 {
-    font-size: 34px;
-    margin-bottom: 20px;
-}
-.topic{
-    font-size: 30px;
-    text-transform: uppercase;
+.topic_arabic {
+    font-size: 24px;
     font-weight: bold;
-    letter-spacing: 1px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.topic_arabic{
-    font-size: 50px;
-}
-.form-group {
-    margin-bottom: 10px;
+    text-align: center;
 }
 
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+.sector-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.form-control, .form-control-file {
-    width: 100%;
+.sector-item {
+    margin: 10px;
+    font-size: 20px;
+    text-shadow: 1px 2px 9px rgba(165, 42, 42, 0.7); 
+    font-weight: bold;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
-.btn {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
+.application-form {
+    padding: 20px;
+}
+
+.application-form label {
+    font-weight: bold;
+}
+
+.application-form input, 
+.application-form select {
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.btn-success {
+    background-color: rgb(50, 150, 50); /* Green color for submit button */
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
     transition: background-color 0.3s, box-shadow 0.3s; 
 }
-
 .btn:hover {
     background-color: #5de061; /* Brighter green for the hover */
     box-shadow: 0 0 10px rgba(50, 157, 50, 0.4) /* Shiny glow effect */
 }
-
 .submit-message {
-    text-align: center;
-    font-size: 20px;
-    color: gold;
     margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .sector-item {
+        flex: 1 0 45%; /* Two items per row on small screens */
+    }
 }
