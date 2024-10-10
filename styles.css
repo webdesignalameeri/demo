@@ -7,215 +7,115 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 2px;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 50px auto;
     background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid black;
+    padding: 30px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-image: url(logo-alameeri_bg_page-0001.jpg);
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+.h4, h4 {
+    font-size: 1.5rem;
+    margin-top: 40px;
 }
 
-.header {
+.highlighted-text {
+    color: rgb(211, 181, 12); /* Change text color */
+    font-weight: bold; /* Make it bold */
+    font-size: 2rem; /* Adjust font size */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* Optional text shadow */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.highlighted-info{
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.highlighted-info2{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.sector-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 columns */
+    gap: 1rem; /* Space between grid items */
+    margin-bottom: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; /* Centering text */
+}
+
+.sector-item {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-shadow: 1px 2px 9px rgba(165, 42, 42, 0.7); /* Text shadow effect */
+}
+
+.text-center {
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.header .logo {
-    width: 150px;
-    margin-bottom: 10px;
-}
-
-.header h1 {
+h1 {
     font-size: 34px;
     margin-bottom: 20px;
 }
-
-.application-form .section {
-    margin-bottom: 30px;
-}
-
-.personal-info, .job-info, .education-info, .employment-record {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.job-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between the columns */
-}
-
-.personal-info {
-    display: flex;
-    flex-direction: column; /* Change to column for smaller screens */
-    gap: 20px;
-}
-
-.photo {
-    width: 150px;
-    height: 200px;
-    border: 1px solid black;
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 80px;
-    background-color: #f4f4f4;
-    position: relative;
-    align-self: center; /* Center the photo */
-}
-
-.photo input[type="file"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 1; /* Hide the actual input */
-    cursor: pointer;
-}
-
-.fields {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px;
-}
-
-.fields label {
-    display: block;
+.topic{
+    font-size: 30px;
+    text-transform: uppercase;
     font-weight: bold;
-    margin-top: 10px;
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-.fields input, .fields textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.topic_arabic{
+    font-size: 50px;
 }
-
-.radio-group {
-    display: flex;
-    gap: 20px;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.radio-group label input[type="radio"] {
-    appearance: none;
-    height: 15px;
-    width: 15px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 0; /* Square bullets */
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.radio-group label input[type="radio"]:checked {
-    background-color: black; /* Show black on check */
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-table th {
-    background-color: lightgrey; /* Grey background for table header */
-}
-
-#comp1, #occu1, #sal1, #emp1, #reas1 {
-    background: linear-gradient(to right, lightgrey, white);
-}
-
-h2 {
-    font-size: 20px;
+.form-group {
     margin-bottom: 10px;
-    text-align: center;
 }
 
-.company-info, .position-info, #gender-info, #marriage-info {
-    background: linear-gradient(to right, lightgrey, white);
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.employment-record hr {
-    border: 1px solid black; /* Line below the Employment Record heading */
-}
-
-#company, #position {
-    padding: 8px;
-    border-radius: 4px;
+.form-control, .form-control-file {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.employment-record .record {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Added gap for proper alignment */
-    margin-bottom: 20px;
-}
-
-.submit-section {
-    margin-top: 20px;
-}
-
-/* Submit button style */
-button[type="submit"] {
+.btn {
     padding: 10px 15px;
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s; 
+}
+
+.btn:hover {
+    background-color: #5de061; /* Brighter green for the hover */
+    box-shadow: 0 0 10px rgba(50, 157, 50, 0.4) /* Shiny glow effect */
 }
 
 .submit-message {
     text-align: center;
-    font-size: 50px;
-    color: gold; /* You can change the color as needed */
+    font-size: 20px;
+    color: gold;
     margin-top: 20px;
 }
-
-button[type="submit"]:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-
-/* @media (max-width: 768px) {
-    .job-info {
-        grid-template-columns: 1fr; 
-    }
-
-    .personal-info {
-        flex-direction: column; 
-    }
-
-    .employment-record .record {
-        grid-template-columns: 1fr; 
-    }
-
-    .header h1 {
-        font-size: 28px; 
-    }
-
-    .header .logo {
-        width: 100px; 
-    }
-
-    .submit-message {
-        font-size: 30px; 
-    }
-} */

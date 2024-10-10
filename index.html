@@ -8,159 +8,126 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <div class="container mt-5">
-            <div class="text-center mb-4">
-                <img src="al_ameeri_group_holding_logo.jpeg" alt="Logo" class="logo mb-2" style="width: 200px;">
-                <h1>Employment Application <br>  استمارة طلب وظيفة </h1>
-            </div>
-    
-            <form class="application-form" id="application-form">
-                <div class="form-group row">
-                    <!-- <div class="col-md-4 text-center">
-                        <div class="photo border">
-                            <p>PHOTO</p>
-                            <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required class="d-none">
-                            <label for="photo" class="btn btn-light" style="width: 150px;">Upload</label>
-                        </div>
-                    </div> -->
-    
-                    <div class="col-md-12">
-                        <label for="fullname">Full Name/ الاسم الكامل:</label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" required>
-    
-                        <label for="nationality">Nationality:</label>
-                        <input type="text" class="form-control" id="nationality" name="nationality" required>
-    
-                        <label for="phone">Phone No:</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" required>
-    
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-    
-                        <label id="gender-info">Gender:</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gender" id="gender-male" value="male" required>
-                            <label class="form-check-label" for="gender-male"> Male</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gender" id="gender-female" value="female" required>
-                            <label class="form-check-label" for="gender-female"> Female</label>
-                        </div>
-    
-                     
-                    </div>
-                </div>
-    
-                <div class="form-group row">
-                    
-                    <div class="col-md-6">
-                        <label for="position">Position Applied For:</label>
-                        <input type="text" class="form-control" id="position" name="position" required>
-                    </div>
-                </div>
-    
-                <!-- <div class="form-group">
-                    <h2>Educational Background</h2>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Year of Graduation</th>
-                                <th>University / College Name</th>
-                                <th>Major</th>
-                                <th>Last Degree</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="text" class="form-control" name="year" required></td>
-                                <td><input type="text" class="form-control" name="university" required></td>
-                                <td><input type="text" class="form-control" name="major" required></td>
-                                <td><input type="text" class="form-control" name="degree" required></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div> -->
-    
-                <div class="form-group">
-                    <div class="row">
-                        <!-- <div class="col-md-4">
-                            <label id="comp1">Company Name:</label>
-                            <input type="text" class="form-control" name="company1" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label id="occu1">Occupation Title:</label>
-                            <input type="text" class="form-control" name="occupation1" required>
-                        </div> -->
-                        <div class="col-md-12">
-                            <label id="sal1">Salary:</label>
-                            <input type="text" class="form-control" name="salary1" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- <div class="col-md-4">
-                            <label id="emp1">Employment Period:</label>
-                            <input type="text" class="form-control" name="from1" required>
-                        </div>
-                        <div class="col-md-4">
-                            <label id="reas1">Reason for Leaving:</label>
-                            <input type="text" class="form-control" name="reason1" required>
-                        </div> -->
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="sign">Your Signature (JPG,JPEG,PNG):</label>
-                    <input type="file" id="sign" name="sign" accept=".jpg,.jpeg,.png" required class="form-control-file">
-                </div>
-
-                <div class="form-group">
-                    <label for="cv">Upload your CV (PDF):</label>
-                    <input type="file" id="cv" name="cv" accept=".pdf" required class="form-control-file">
-                </div>
-                <div class="form-group">
-                    <label for="certificates">Any other Certificates (PDF):</label>
-                    <input type="file" id="certificates" name="certificates" accept=".pdf" multiple required class="form-control-file">
-                </div>                
-                <button type="submit" class="btn btn-success">Submit</button>
-            </form>
-    
-            <div id="submit-message" class="submit-message text-center" style="display:none;"></div> <!-- Submit message -->
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <img src="Asset 2.png" alt="Logo" class="logo mb-2" style="width: 350px;">
+            <h4><span class="highlighted-text">AL AMEERI</span> <span class="highlighted-info">is searching for innovative and talented individuals to join our dynamic team.</span>
+                <span class="highlighted-info2">Explore your potential with us in the following fields:</span>
+            </h4>
         </div>
-    
-        <script>
-            const certificatesInput = document.getElementById('certificates');
-certificatesInput.addEventListener('change', (event) => {
-    const files = event.target.files;
-    const fileNames = Array.from(files).map(file => file.name).join(', ');
-    console.log('Selected certificates:', fileNames);
-});
+        <div>
+            <div class="sector-list">
+                <div class="sector-item">• Retail </div>
+                <div class="sector-item">• Marine</div>
+                <div class="sector-item">• Land</div>
+                <div class="sector-item">• Navigation</div>
+                <div class="sector-item">• Electronics</div>
+                <div class="sector-item">• Food <br> & <br> Beverage</div>
+                <div class="sector-item">• Real Estate</div>
+                <div class="sector-item">• Investment</div>
+                <div class="sector-item center-sector">• Shipping</div>
+                <div class="sector-item center-sector">• Commercial & Government</div> 
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            <h4 class="topic">Employment Application</h4>
+            <br>
+            <h1 class="topic_arabic">استمارة طلب وظيفة</h1>
+        </div>
+        <form class="application-form" id="application-form">
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <label for="fullname">Full Name / الاسم الكامل:</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" required><br>
 
-            let form = document.querySelector("form");
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                let data = new FormData(form);
-    
-                fetch('https://script.google.com/macros/s/AKfycbx4KCFPEyi66hXSE1bB_lLrLukjA_JQjc_OrBFpNqLVNVETD-Osbi6duSaE_E-_wlzmdg/exec', {
-                    method: "POST",
-                    body: data
-                })
-                .then(response => response.text())
-                .then(data => console.log(data))
-                .catch(error => console.error('Error:', error));
-    
-                document.getElementById('submit-message').innerText = 'Form submitted successfully!';
-                document.getElementById('submit-message').style.display = 'block';
-                document.getElementById('submit-message').style.opacity = '1';
-    
-                // Clear the form
-                form.reset();
-    
-                // Hide the message after 3 seconds
-                setTimeout(() => {
-                    document.getElementById('submit-message').style.display = 'none';
-                }, 3000);
-            });
-        </script>
-    
+                    <label for="nationality">Nationality / الجنسية:</label>
+                    <input type="text" class="form-control" id="nationality" name="nationality" required><br>
+
+                    <label for="phone">Phone No / رقم الهاتف:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required><br>
+
+                    <label for="email">Email / البريد الإلكتروني:</label>
+                    <input type="email" class="form-control" id="email" name="email" required><br>
+
+                    <label id="gender-info">Gender / الجنس:</label><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="gender-male" value="male" required>
+                        <label class="form-check-label" for="gender-male"> Male / ذكر</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="gender-female" value="female" required>
+                        <label class="form-check-label" for="gender-female"> Female / أنثى</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="position">Position Applied For / الوظيفة المتقدم لها:</label>
+                    <input type="text" class="form-control" id="position" name="position" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label id="sal1">Last Company / آخر شركة :</label>
+                        <input type="text" class="form-control" name="last_company" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label id="sal1">Last Salary / آخر راتب :</label>
+                        <input type="text" class="form-control" name="last_salary" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cv">Upload your CV (PDF) / رفع السيرة الذاتية :</label>
+                <input type="file" id="cv" name="cv" accept=".pdf" required class="form-control-file">
+            </div>
+            <div class="form-group">
+                <label for="certificates">Any other Certificates (PDF) / أي شهادات أخرى :</label>
+                <input type="file" id="certificates" name="certificates" accept=".pdf" multiple required class="form-control-file">
+            </div>
+            <button type="submit" class="btn btn-success">Submit / إرسال</button>
+        </form>
+
+        <div id="submit-message" class="submit-message text-center" style="display:none;"></div> <!-- Submit message -->
+    </div>
+
+    <script>
+        const certificatesInput = document.getElementById('certificates');
+        certificatesInput.addEventListener('change', (event) => {
+            const files = event.target.files;
+            const fileNames = Array.from(files).map(file => file.name).join(', ');
+            console.log('Selected certificates:', fileNames);
+        });
+
+        let form = document.querySelector("form");
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let data = new FormData(form);
+
+            fetch('https://script.google.com/macros/s/AKfycbx4KCFPEyi66hXSE1bB_lLrLukjA_JQjc_OrBFpNqLVNVETD-Osbi6duSaE_E-_wlzmdg/exec', {
+                method: "POST",
+                body: data
+            })
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+
+            document.getElementById('submit-message').innerText = 'Form submitted successfully! / تم إرسال الاستمارة بنجاح!';
+            document.getElementById('submit-message').style.display = 'block';
+            document.getElementById('submit-message').style.opacity = '1';
+
+            // Clear the form
+            form.reset();
+
+            // Hide the message after 3 seconds
+            setTimeout(() => {
+                document.getElementById('submit-message').style.display = 'none';
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
