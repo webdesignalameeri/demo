@@ -18,10 +18,11 @@ body {
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     background-image: url(logo-alameeri_bg_page-0001.jpg);
-    background-size: cover;
+    background-size: cover; /* This makes the image cover the entire div */
     background-position: center;
     border: none;
 }
+
 
 .h4, h4 {
     font-size: 1.5rem;
@@ -29,23 +30,9 @@ body {
 }
 
 .highlighted-text {
-    color: rgb(211, 181, 12); /* Change text color */
-    font-weight: bold; /* Make it bold */
-    font-size: 2rem; /* Adjust font size */
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* Optional text shadow */
+    font-size: 25px; /* Adjust font size */
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.highlighted-info {
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
-
-.highlighted-info2 {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
 }
 
 .topic {
@@ -54,27 +41,15 @@ body {
     font-weight: bold;
     text-align: center;
 }
+.sector-topic{
+    text-align: left;
+    font-weight: bold;
+}
 
 .topic_arabic {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-}
-
-.sector-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.sector-item {
-    margin: 10px;
-    font-size: 20px;
-    text-shadow: 1px 2px 9px rgba(165, 42, 42, 0.7); 
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 8px;
 }
 
 .application-form {
