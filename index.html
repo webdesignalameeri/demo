@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Employment Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="container mt-5">
+            <div class="text-center mb-4">
+                <img src="al_ameeri_group_holding_logo.jpeg" alt="Logo" class="logo mb-2" style="width: 200px;">
+                <h1>Employment Application <br>  استمارة طلب وظيفة </h1>
+            </div>
+    
+            <form class="application-form" id="application-form">
+                <div class="form-group row">
+                    <!-- <div class="col-md-4 text-center">
+                        <div class="photo border">
+                            <p>PHOTO</p>
+                            <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required class="d-none">
+                            <label for="photo" class="btn btn-light" style="width: 150px;">Upload</label>
+                        </div>
+                    </div> -->
+    
+                    <div class="col-md-12">
+                        <label for="fullname">Full Name/ الاسم الكامل:</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" required>
+    
+                        <label for="nationality">Nationality:</label>
+                        <input type="text" class="form-control" id="nationality" name="nationality" required>
+    
+                        <label for="phone">Phone No:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+    
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+    
+                        <label id="gender-info">Gender:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="gender-male" value="male" required>
+                            <label class="form-check-label" for="gender-male"> Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="gender-female" value="female" required>
+                            <label class="form-check-label" for="gender-female"> Female</label>
+                        </div>
+    
+                     
+                    </div>
+                </div>
+    
+                <div class="form-group row">
+                    
+                    <div class="col-md-6">
+                        <label for="position">Position Applied For:</label>
+                        <input type="text" class="form-control" id="position" name="position" required>
+                    </div>
+                </div>
+    
+                <!-- <div class="form-group">
+                    <h2>Educational Background</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Year of Graduation</th>
+                                <th>University / College Name</th>
+                                <th>Major</th>
+                                <th>Last Degree</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" class="form-control" name="year" required></td>
+                                <td><input type="text" class="form-control" name="university" required></td>
+                                <td><input type="text" class="form-control" name="major" required></td>
+                                <td><input type="text" class="form-control" name="degree" required></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+    
+                <div class="form-group">
+                    <div class="row">
+                        <!-- <div class="col-md-4">
+                            <label id="comp1">Company Name:</label>
+                            <input type="text" class="form-control" name="company1" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label id="occu1">Occupation Title:</label>
+                            <input type="text" class="form-control" name="occupation1" required>
+                        </div> -->
+                        <div class="col-md-12">
+                            <label id="sal1">Salary:</label>
+                            <input type="text" class="form-control" name="salary1" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- <div class="col-md-4">
+                            <label id="emp1">Employment Period:</label>
+                            <input type="text" class="form-control" name="from1" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label id="reas1">Reason for Leaving:</label>
+                            <input type="text" class="form-control" name="reason1" required>
+                        </div> -->
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="cv">Upload your CV (PDF):</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf" required class="form-control-file">
+                </div>
+                <div class="form-group">
+                    <label for="certificates">Any other Certificates:</label>
+                    <input type="file" id="certificates" name="certificates" accept=".pdf" multiple required class="form-control-file">
+                </div>                
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+    
+            <div id="submit-message" class="submit-message text-center" style="display:none;"></div> <!-- Submit message -->
+        </div>
+    
+        <script>
+            const certificatesInput = document.getElementById('certificates');
+certificatesInput.addEventListener('change', (event) => {
+    const files = event.target.files;
+    const fileNames = Array.from(files).map(file => file.name).join(', ');
+    console.log('Selected certificates:', fileNames);
+});
+
+            let form = document.querySelector("form");
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let data = new FormData(form);
+    
+                fetch('https://script.google.com/macros/s/AKfycbx4KCFPEyi66hXSE1bB_lLrLukjA_JQjc_OrBFpNqLVNVETD-Osbi6duSaE_E-_wlzmdg/exec', {
+                    method: "POST",
+                    body: data
+                })
+                .then(response => response.text())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+    
+                document.getElementById('submit-message').innerText = 'Form submitted successfully!';
+                document.getElementById('submit-message').style.display = 'block';
+                document.getElementById('submit-message').style.opacity = '1';
+    
+                // Clear the form
+                form.reset();
+    
+                // Hide the message after 3 seconds
+                setTimeout(() => {
+                    document.getElementById('submit-message').style.display = 'none';
+                }, 3000);
+            });
+        </script>
+    
+</body>
+</html>
